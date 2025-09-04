@@ -1,14 +1,16 @@
-# Thoughtful
 
-This repository contains a simple data ingestion example using SQLAlchemy and
-WebSocket/REST clients.
+# thoughtful
 
-## Data Ingestion
+Simple FastAPI application with `/health` and `/trigger` endpoints.
 
-The `data` package exposes a `ProviderClient` capable of:
+## Running with nohup
 
-- Connecting to a WebSocket for streaming underlying price ticks.
-- Querying a REST endpoint for option chain data.
-- Persisting the received information into SQLite or PostgreSQL via SQLAlchemy.
-
-See `data/ingestion.py` for an example entrypoint.
+1. Install dependencies:
+   ```bash
+   pip install fastapi uvicorn
+   ```
+2. Start the server in the background:
+   ```bash
+   ./run_nohup.sh
+   ```
+   The process ID is stored in `app.pid` and output is logged to `app.log`.
