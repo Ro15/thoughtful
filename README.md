@@ -1,3 +1,4 @@
+
 # thoughtful
 
 Simple FastAPI application with `/health` and `/trigger` endpoints.
